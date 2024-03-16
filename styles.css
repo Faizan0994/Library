@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: helvetica, arial, sans-serif;
+    color: white;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 2fr 14fr 4fr;
+    height: 100vh;
+}
+
+.header {
+    background-color: #4a8548;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1 / span 1;
+}
+
+.main-section {
+    background-color: #dfb863;
+    grid-row: 2 / span 1;
+}
+
+.footer {
+    background-color: #dfb863;
+    grid-row: 3 / span 1;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    row-gap: 16px;
+}
+
+.button-container {
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-book {
+    height: 60%;
+    width: 15%;
+    font-size: 2rem;
+    background-color: #4a8548;
+    color: white;
+    border: none;
+    border-radius: 16px;
+}
