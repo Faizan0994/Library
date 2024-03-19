@@ -50,9 +50,8 @@ body {
 }
 
 .add-book {
-    height: 60%;
-    width: 15%;
-    font-size: 2rem;
+    padding: 16px 12px;
+    font-size: 200%;
     background-color: #4a8548;
     color: white;
     border: none;
