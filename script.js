@@ -59,3 +59,15 @@ const createCard = function(book) {//This creates a card
 
     main_section.appendChild(card);
 }
+
+const displayCards = function(library) {  //For displaying all cards
+    while (main_section.firstChild) { //Remove already existing cards
+        main_section.removeChild(main_section.lastChild);
+      }
+
+    library.forEach(book => { //Create new cards
+        createCard(book);
+    });
+}
+
+displayCards(myLibrary);
