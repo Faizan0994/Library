@@ -50,10 +50,10 @@ const createCard = function(book) {//This creates a card
     const checkbox = document.createElement('input');
     checkbox.setAttribute('type', 'checkbox');
     if(book.read_status === "read") checkbox.checked = true;
-    read.appendChild(checkbox);
     const read_label = document.createElement('label')
     read_label.textContent = "Read: "
     read.appendChild(read_label);
+    read.appendChild(checkbox);
 
     card.appendChild(read);
 
