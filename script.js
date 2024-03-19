@@ -70,4 +70,9 @@ const displayCards = function(library) {  //For displaying all cards
     });
 }
 
+
+/////////////////////////////////////////////
+//Working
+/////////////////////////////////////////////
+
 displayCards(myLibrary);
