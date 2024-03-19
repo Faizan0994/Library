@@ -25,6 +25,12 @@ body {
 
 .main-section {
     background-color: #dfb863;
+    padding: 16px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    align-items: center;
     grid-row: 2 / span 1;
 }
 
