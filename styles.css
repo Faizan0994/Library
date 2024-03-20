@@ -39,6 +39,7 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 form legend {
@@ -51,11 +52,21 @@ form legend {
     flex-direction: column;
 }
 
+.form-row label {
+    padding-left: 8px;
+}
+
 .form-row input { /*select inputs except the checkbox*/
     appearance: none;
     border: 1px solid grey;
     border-radius: 12px;
-    height: 1.5vw;
+    height: 1vh;
+    padding: 8px;
+}
+
+.form-read-status {
+    display: flex;
+    gap: 8px;
 }
 
 .footer {
