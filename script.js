@@ -3,6 +3,9 @@
 ////////////////////////////////////
 var myLibrary = []; //array to store books
 var main_section = document.querySelector('.main-section');
+var addBookButton = document.querySelector('.add-book');
+var createBookButton = document.createElement('button');
+var footer = document.querySelector('.footer')
 
 function book(name, author, pages, read_status) {//A book object constructor
     this.name = name;
@@ -68,6 +71,75 @@ const displayCards = function(library) {  //For displaying all cards
     library.forEach(book => { //Create new cards
         createCard(book);
     });
+}
+
+const displayForm = function() {
+    //creates the form and all inputs
+    const form = document.createElement('form');
+    form.action = "";
+    
+    const legend = document.createElement('legend');
+    legend.textContent = "Enter info about the book";
+    form.appendChild(legend);
+
+    const row1 = document.createElement('div');
+    row1.classList.add('form-row');
+    const titleLabel = document.createElement('label');
+    titleLabel.textContent = "Title:";
+    titleLabel.setAttribute('for', 'title');
+    row1.appendChild(titleLabel);
+    const titleInput = document.createElement('input');
+    titleInput.setAttribute('type', 'text');
+    titleInput.setAttribute('id', 'title');
+    titleInput.setAttribute('name', 'title');
+    row1.appendChild(titleInput);
+    form.appendChild(row1);
+
+    const row2 = document.createElement('div');
+    row2.classList.add('form-row');
+    const authorLabel = document.createElement('label');
+    authorLabel.textContent = "Author:";
+    authorLabel.setAttribute('for', 'author');
+    row2.appendChild(authorLabel);
+    const authorInput = document.createElement('input');
+    authorInput.setAttribute('type', 'text');
+    authorInput.setAttribute('id', 'author');
+    authorInput.setAttribute('name', 'author');
+    row2.appendChild(authorInput);
+    form.appendChild(row2);
+
+    const row3 = document.createElement('div');
+    row3.classList.add('form-row');
+    const pagesLabel = document.createElement('label');
+    pagesLabel.textContent = "No. of pages:";
+    pagesLabel.setAttribute('for', 'pages');
+    row3.appendChild(pagesLabel);
+    const pagesInput = document.createElement('input');
+    pagesInput.setAttribute('type', 'number');
+    pagesInput.setAttribute('id', 'pages');
+    pagesInput.setAttribute('name', 'pages');
+    row3.appendChild(pagesInput);
+    form.appendChild(row3);
+
+    const row4 = document.createElement('div');
+    row4.classList.add('form-read-status');
+    const readLabel = document.createElement('label');
+    readLabel.textContent = "Read:";
+    readLabel.setAttribute('for', 'read');
+    row4.appendChild(readLabel);
+    const readInput = document.createElement('input');
+    readInput.setAttribute('type', 'checkbox');
+    readInput.setAttribute('id', 'read');
+    readInput.setAttribute('name', 'read');
+    row4.appendChild(readInput);
+    form.appendChild(row4);
+
+    createBookButton.setAttribute('type', 'submit');
+    createBookButton.classList.add('create-book');
+    createBookButton.textContent = "Create Book";
+    form.appendChild(createBookButton);
+
+    main_section.appendChild(form);
 }
 
 
