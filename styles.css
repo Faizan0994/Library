@@ -34,6 +34,30 @@ body {
     grid-row: 2 / span 1;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+form legend {
+    font-size: 200%;
+    color: rgb(121, 120, 120);
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row input { /*select inputs except the checkbox*/
+    appearance: none;
+    border: 1px solid grey;
+    border-radius: 12px;
+    height: 1.5vw;
+}
+
 .footer {
     background-color: #dfb863;
     grid-row: 3 / span 1;
@@ -49,13 +73,17 @@ body {
     align-items: center;
 }
 
-.add-book {
+.add-book, .create-book {
     padding: 16px 12px;
     font-size: 200%;
     background-color: #4a8548;
     color: white;
     border: none;
     border-radius: 16px;
+}
+
+.create-book {
+    font-size: 150%;
 }
 
 .card {
