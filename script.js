@@ -35,6 +35,7 @@ const createCard = function(book) {//This creates a card
     card.appendChild(heading);
 
     const cross = document.createElement('img');
+    cross.classList.add('cross');
     cross.setAttribute('src', './1544641784.svg');
     card.appendChild(cross);
 
@@ -60,6 +61,10 @@ const createCard = function(book) {//This creates a card
     read.appendChild(checkbox);
 
     card.appendChild(read);
+
+    let index = myLibrary.indexOf(book);
+    index = index.toString();
+    card.setAttribute('data-index', index);
 
     main_section.appendChild(card);
 }
@@ -167,4 +172,13 @@ addBookButton.addEventListener('click', () => {
     addBookButton.remove();
     main_section.style.backgroundColor = "white";
     displayForm();
+});
+
+window.addEventListener('click', (e) => {
+    if(e.target.classList.contains("cross")){
+        parent_index = e.target.parentElement.getAttribute('data-index');
+        console.log(parent_index);
+        myLibrary.splice(parent_index, 1);
+        displayCards(myLibrary);
+    } 
 });
