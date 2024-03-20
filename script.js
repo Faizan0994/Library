@@ -135,7 +135,6 @@ const displayForm = function() {
     row4.appendChild(readInput);
     form.appendChild(row4);
     var read;
-    readInput.checked? read = "read": read = "not read";
 
     createBookButton.setAttribute('type', 'submit');
     createBookButton.classList.add('create-book');
@@ -146,6 +145,7 @@ const displayForm = function() {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        readInput.checked == true? read = "read": read = "not read";
         myLibrary.push(new book(titleInput.value, authorInput.value, pagesInput.value, read));
         displayCards(myLibrary);
         buttonContainer.appendChild(addBookButton);
