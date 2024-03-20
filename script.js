@@ -6,6 +6,7 @@ var main_section = document.querySelector('.main-section');
 var addBookButton = document.querySelector('.add-book');
 var createBookButton = document.createElement('button');
 var footer = document.querySelector('.footer')
+var buttonContainer = document.querySelector('.button-container');
 
 function book(name, author, pages, read_status) {//A book object constructor
     this.name = name;
@@ -133,6 +134,8 @@ const displayForm = function() {
     readInput.setAttribute('name', 'read');
     row4.appendChild(readInput);
     form.appendChild(row4);
+    var read;
+    readInput.checked? read = "read": read = "not read";
 
     createBookButton.setAttribute('type', 'submit');
     createBookButton.classList.add('create-book');
@@ -140,6 +143,14 @@ const displayForm = function() {
     form.appendChild(createBookButton);
 
     main_section.appendChild(form);
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        myLibrary.push(new book(titleInput.value, authorInput.value, pagesInput.value, read));
+        displayCards(myLibrary);
+        buttonContainer.appendChild(addBookButton);
+        main_section.style.backgroundColor = "#dfb863"
+    });
 }
 
 
@@ -148,3 +159,12 @@ const displayForm = function() {
 /////////////////////////////////////////////
 
 displayCards(myLibrary);
+
+addBookButton.addEventListener('click', () => {
+    while (main_section.firstChild) { //Remove already existing cards
+        main_section.removeChild(main_section.lastChild);
+    }
+    addBookButton.remove();
+    main_section.style.backgroundColor = "white";
+    displayForm();
+});
