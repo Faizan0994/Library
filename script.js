@@ -88,7 +88,7 @@ const displayForm = function() {
     titleLabel.textContent = "Title:";
     titleLabel.setAttribute('for', 'title');
     row1.appendChild(titleLabel);
-    const titleInput = document.createElement('input');
+    var titleInput = document.createElement('input');
     titleInput.setAttribute('type', 'text');
     titleInput.setAttribute('id', 'title');
     titleInput.setAttribute('name', 'title');
@@ -101,7 +101,7 @@ const displayForm = function() {
     authorLabel.textContent = "Author:";
     authorLabel.setAttribute('for', 'author');
     row2.appendChild(authorLabel);
-    const authorInput = document.createElement('input');
+    var authorInput = document.createElement('input');
     authorInput.setAttribute('type', 'text');
     authorInput.setAttribute('id', 'author');
     authorInput.setAttribute('name', 'author');
@@ -114,7 +114,7 @@ const displayForm = function() {
     pagesLabel.textContent = "No. of pages:";
     pagesLabel.setAttribute('for', 'pages');
     row3.appendChild(pagesLabel);
-    const pagesInput = document.createElement('input');
+    var pagesInput = document.createElement('input');
     pagesInput.setAttribute('type', 'number');
     pagesInput.setAttribute('id', 'pages');
     pagesInput.setAttribute('name', 'pages');
@@ -127,7 +127,7 @@ const displayForm = function() {
     readLabel.textContent = "Read:";
     readLabel.setAttribute('for', 'read');
     row4.appendChild(readLabel);
-    const readInput = document.createElement('input');
+    var readInput = document.createElement('input');
     readInput.setAttribute('type', 'checkbox');
     readInput.setAttribute('id', 'read');
     readInput.setAttribute('name', 'read');
