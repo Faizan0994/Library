@@ -8,13 +8,17 @@ var createBookButton = document.createElement('button');
 var footer = document.querySelector('.footer')
 var buttonContainer = document.querySelector('.button-container');
 
-function book(name, author, pages, read_status) {//A book object constructor
-    this.name = name;
-    this.author = author;
-    this.pages = pages;
-    this.read_status = read_status;
-    this.info = function(name, author, pages, read_status){
-        console.log(`${this.name}, by ${this.author}, ${this.pages} pages, ${this.read_status}.`);
+
+
+class book {
+    constructor(name, author, pages, read_status){
+        this.name = name;
+        this.author = author;
+        this.pages = pages;
+        this.read_status = read_status;
+        this.info = function(name, author, pages, read_status){
+            console.log(`${this.name}, by ${this.author}, ${this.pages} pages, ${this.read_status}.`);
+        }
     }
 }
 
