@@ -103,6 +103,13 @@ const displayForm = function() {
     titleInput.setAttribute('id', 'title');
     titleInput.setAttribute('name', 'title');
     titleInput.required = true;
+    titleInput.addEventListener('input', (e) => {
+        if(titleInput.validity.valueMissing){
+            titleInput.setCustomValidity("Can't leave this empty");
+        } else {
+            titleInput.setCustomValidity("");
+        }
+    });
     row1.appendChild(titleInput);
     form.appendChild(row1);
 
@@ -117,6 +124,13 @@ const displayForm = function() {
     authorInput.setAttribute('id', 'author');
     authorInput.setAttribute('name', 'author');
     authorInput.required = true;
+    authorInput.addEventListener('input', (e) => {
+        if(authorInput.validity.valueMissing){
+            authorInput.setCustomValidity("Can't leave this empty");
+        } else {
+            authorInput.setCustomValidity("");
+        }
+    });
     row2.appendChild(authorInput);
     form.appendChild(row2);
 
@@ -131,6 +145,13 @@ const displayForm = function() {
     pagesInput.setAttribute('id', 'pages');
     pagesInput.setAttribute('name', 'pages');
     pagesInput.required = true;
+    pagesInput.addEventListener('input', (e) => {
+        if(pagesInput.validity.valueMissing){
+            pagesInput.setCustomValidity("Can't leave this empty");
+        } else {
+            pagesInput.setCustomValidity("");
+        }
+    });
     row3.appendChild(pagesInput);
     form.appendChild(row3);
 
