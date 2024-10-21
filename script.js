@@ -102,6 +102,7 @@ const displayForm = function() {
     titleInput.setAttribute('type', 'text');
     titleInput.setAttribute('id', 'title');
     titleInput.setAttribute('name', 'title');
+    titleInput.required = true;
     row1.appendChild(titleInput);
     form.appendChild(row1);
 
@@ -115,6 +116,7 @@ const displayForm = function() {
     authorInput.setAttribute('type', 'text');
     authorInput.setAttribute('id', 'author');
     authorInput.setAttribute('name', 'author');
+    authorInput.required = true;
     row2.appendChild(authorInput);
     form.appendChild(row2);
 
@@ -128,6 +130,7 @@ const displayForm = function() {
     pagesInput.setAttribute('type', 'number');
     pagesInput.setAttribute('id', 'pages');
     pagesInput.setAttribute('name', 'pages');
+    pagesInput.required = true;
     row3.appendChild(pagesInput);
     form.appendChild(row3);
 
